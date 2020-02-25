@@ -111,7 +111,7 @@ namespace ConsoleApp9
                         {
                             Console.WriteLine("Dijite 's' para obtenter otra carta o 'f' para retirarse");
                             continuar = Console.ReadLine();
-                            while (continuar != "s" || continuar != "f")
+                            while (continuar != "s" && continuar != "f")
                             {
                                 Console.WriteLine("Error, digite 's' o 'f'.");
                                 continuar = Console.ReadLine();
@@ -221,7 +221,7 @@ namespace ConsoleApp9
 
                 Console.WriteLine("\n¿Desea jugar otra vez? (digite 's' para si o 'n' para no)");
                 continuarJuego = Console.ReadLine();
-                while (continuarJuego != "s" || continuarJuego != "n")
+                while (continuarJuego != "s" && continuarJuego != "n")
                 {
                     Console.WriteLine("Error, digite 's' o 'n'.");
                     continuarJuego = Console.ReadLine();
