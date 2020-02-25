@@ -13,7 +13,7 @@ namespace ConsoleApp9
                 int jugador1P = 0, jugador2P = 0, jugador3P = 0, jugador4P = 0, jugador5P = 0, jugador6P = 0, jugador7P = 0, mayor = 0, contadorNombre = 1, contadorJugadores = 0;
                 Console.WriteLine("Dijite la cantidad de juagdores (minimo 2, maximo 7)");
                 int n = int.Parse(Console.ReadLine());
-                while (n <= 1 || n > 8)
+                while (n <= 1 || n >= 8)
                 {
                     Console.WriteLine("Es imposible jugar con " + n + " jugador(es). Dijite nuevamente la cantidad de juagdores");
                     n = int.Parse(Console.ReadLine());
@@ -65,9 +65,9 @@ namespace ConsoleApp9
                     }
                 }
                 while (contadorJugadores < n)
-                    {
+                {
                     Random aleatorio = new Random();
-                    int carta1 = 0 , carta2 = 0 , total = 0 , contador = 0;
+                    int carta1 = 0, carta2 = 0, total = 0, contador = 0;
 
                     if (contadorJugadores == 0)
                         Console.WriteLine("\n" + jugador1 + ", dijite 's' para empezar su turno");
@@ -111,6 +111,11 @@ namespace ConsoleApp9
                         {
                             Console.WriteLine("Dijite 's' para obtenter otra carta o 'f' para retirarse");
                             continuar = Console.ReadLine();
+                            while (continuar != "s" || continuar != "f")
+                            {
+                                Console.WriteLine("Error, digite 's' o 'f'.");
+                                continuar = Console.ReadLine();
+                            }
                         }
                     }
 
@@ -216,6 +221,11 @@ namespace ConsoleApp9
 
                 Console.WriteLine("\n¿Desea jugar otra vez? (digite 's' para si o 'n' para no)");
                 continuarJuego = Console.ReadLine();
+                while (continuarJuego != "s" || continuarJuego != "n")
+                {
+                    Console.WriteLine("Error, digite 's' o 'n'.");
+                    continuarJuego = Console.ReadLine();
+                }
             }
         }
     }
